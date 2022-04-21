@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dongle:wght@300&family=Lato&family=Nunito:wght@300&family=Open+Sans:wght@300&display=swap');
 
 /*-----To All Start-----*/
 * {
@@ -8,7 +8,12 @@
   scroll-behavior: smooth;
   text-transform: capitalize;
   color: rgb(49, 49, 49);
-  font-family: "Nunito", sans-serif;
+  /* font-family: 'Nunito', sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+.ff-name{
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -16,8 +21,17 @@
 }
 
 .container h1 {
+  font-size: 3rem;
+  font-family: 'Cookie', cursive;
   margin: 4rem auto;
   font-weight: bold;
+}
+
+.container p{
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Dongle', sans-serif;
 }
 
 .bg-main {
@@ -28,8 +42,13 @@
   background-color: tomato;
 }
 
+.fa-bars{
+  transition: .7s;
+  cursor: pointer;
+}
 .hide {
-  display: none;
+  transition: .7s;
+  transform: rotate(-180deg);
 }
 
 .btn {
@@ -60,18 +79,14 @@ h5 {
   top: -400px;
   left: 0px;
   transition: 0.7s;
-  opacity: 0.9;
   z-index: -1;
+  background-color: aliceblue;
 }
 
 .nav-items a {
-  border-bottom: 2px double black;
-  border-radius: 0.2rem;
   text-decoration: none;
-  color: tomato;
-  width: 150px;
-  height: 25px;
-  margin: 18px auto 0px;
+  color: rgb(50, 50, 50);
+  margin-top: 40px;
 }
 
 /*-----CSS NavBar Ends-----*/
@@ -99,7 +114,6 @@ h5 {
 .outerBox:hover .profile-pic {
   transition: 0.7s;
 }
-
 
 /*-----CSS About Ends-----*/
 
@@ -180,7 +194,6 @@ textarea {
 
 /*-----CSS Footer Ends-----*/
 
-
 @media only screen and (min-width: 300px) {
   .show {
     position: absolute;
@@ -190,6 +203,10 @@ textarea {
     transition: 0.7s;
     background-color: aliceblue;
     z-index: -1;
+    border-bottom: 1px dotted tomato;
+  }
+  .nav-items i {
+    padding: 20px 0px;
   }
 }
 
@@ -207,19 +224,22 @@ textarea {
 
 @media only screen and (min-width: 992px) {
   /*-----CSS NavBar Start-----*/
-
+  .container {
+  }
   .bar {
     display: none;
   }
 
   .nav-items {
-    position: static;;
+    position: static;
     flex-direction: row;
   }
 
   .nav-items a {
+    height: 25px;
+    width: 100%;
     border-bottom: none;
-    margin: 0;
+    margin: auto 0;
   }
 
   .nav-items a:hover {
@@ -228,6 +248,7 @@ textarea {
 
   .show {
     position: static;
+    border: none;
   }
 
   /*-----CSS NavBar Ends-----*/
